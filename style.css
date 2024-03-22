@@ -15,8 +15,6 @@ body {
   justify-content: center;
 }
 .container {
-  background-color: green;
-  opacity: 20%;
   position: relative;
   max-width: 900px;
   height: 100vh;
