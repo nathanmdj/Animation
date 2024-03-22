@@ -15,6 +15,8 @@ body {
   justify-content: center;
 }
 .container {
+  background-color: green;
+  opacity: 20%;
   position: relative;
   max-width: 900px;
   height: 100vh;
@@ -34,7 +36,7 @@ body {
   width: 60%;
   height: clamp(200px, 48vw, 430px);
   animation: slideInFromRight 1s ease forwards;
-  right: -200%;
+  right: -160%;
 }
 
 .img1 img {
@@ -132,10 +134,10 @@ img {
 
 @keyframes slideInFromRight {
   0% {
-      transform: translateX(100%); /* Move left outside the viewport */
+      transform: translateX(0%); /* Move left outside the viewport */
   }
   100% {
-      transform: translateX(-238%); /* Move to the original position */
+      transform: translateX(-338%); /* Move to the original position */
   }
 }
 
