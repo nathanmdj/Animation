@@ -1,0 +1,183 @@
+*, *::before, *::after, body {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  
+  
+  overflow-x: hidden;
+}
+
+.background {
+  background: url(./images/background.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  position: relative;
+  max-width: 900px;
+  height: 100vh;
+  display: inline-block;
+}
+
+.group1 {
+  display: flex;
+}
+
+.img {
+  position:absolute;
+ 
+}
+
+.img1 {
+  width: 60%;
+  height: clamp(200px, 48vw, 430px);
+  animation: slideInFromRight 1s ease forwards;
+  right: -100%;
+}
+
+.img1 img {
+  position: absolute;
+  bottom: 0;
+}
+
+.img2 {
+  width: 40%;
+  top: 0;
+  left: -100%;
+  animation: slideInFromLeft2 1s ease forwards;
+}
+
+.img3 {
+  width: 60%;
+  height: clamp(360px, 72vw, 650px);
+  left: 0;
+  animation: slideInFromLeft 1s ease forwards;
+}
+
+.img3 img {
+  position: absolute;
+  bottom: 0;
+}
+
+.img4 {
+  width: 60%;
+  height: clamp(360px, 72vw, 650px);
+  right: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.img4 img {
+  position: absolute;
+  bottom: 0;
+}
+
+.img5 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: clamp(400px, 80vw,720px);
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.img5 img {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+}
+
+.img6 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: clamp(460px, 92vw,830px);
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.img6 img {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+}
+
+div {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      transform: translateX(-200%); /* Move left outside the viewport */
+  }
+  100% {
+      transform: translateX(0%); /* Move to the original position */
+  }
+}
+
+@keyframes slideInFromLeft2 {
+  0% {
+      transform: translateX(0%); /* Move left outside the viewport */
+  }
+  100% {
+      transform: translateX(400%); /* Move to the original position */
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      transform: translateX(100%); /* Move left outside the viewport */
+  }
+  100% {
+      transform: translateX(-238%); /* Move to the original position */
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+      transform: translate(0,0); /* Start position: stay at the original position */
+  }
+ 
+  100% {
+      transform: translate(200%,-100%); /* End position: move right outside the viewport again */
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.img1 { animation-delay: 1s; }
+
+.img3 {
+  animation-name: slideInFromLeft;
+   animation-delay: 0s;
+  }
+
+.img3.exit {
+  animation-name: slideOutToRight;
+   animation-delay: 1s;
+  }
+
+.img4{
+  animation-delay: 2.5s;
+  }
+
+.img5{
+  animation-delay: 3s;
+  }
+
+.img2 {
+  animation-delay: 3.5s;
+  }
+
+  .img6{
+    animation-delay: 4s;
+    }
