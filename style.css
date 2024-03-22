@@ -34,7 +34,7 @@ body {
   width: 60%;
   height: clamp(200px, 48vw, 430px);
   animation: slideInFromRight 1s ease forwards;
-  right: -100%;
+  right: -200%;
 }
 
 .img1 img {
